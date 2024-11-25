@@ -10,4 +10,9 @@ class Project extends Model
     {
         return $this->hasMany(ProjectDetail::class);
     }
+
+    public function files()
+    {
+        return $this->morphMany(File::class, 'filable');
+    }
 }
