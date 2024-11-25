@@ -21,7 +21,7 @@ new class extends Component {
         @foreach ($projects as $project)
             <div class="p-4 bg-white rounded-lg shadow-md">
                 <h2 class="mb-4 text-xl font-semibold text-gray-800">
-                    <a href="{{ route('projects.details', $project->id) }}">{{ $project->title }}</a>
+                    <a wire:navigate href="{{ route('projects.details', $project->id) }}">{{ $project->title }}</a>
                 </h2>
                 <div class="space-y-4">
                     <div class="p-4 bg-blue-100 rounded-md">
