@@ -51,7 +51,7 @@ new class extends Component {
     <!-- Main Container -->
     <div class="flex h-screen">
         <!-- Left Sidebar -->
-        <div class="w-1/4 p-4 bg-gray-100 border-r border-gray-200">
+        <div class="w-1/4 max-h-screen p-4 overflow-y-auto bg-gray-100 border-r border-gray-200">
             <h2 class="mb-4 text-xl font-bold">{{ $project->title }}</h2>
             <p class="mb-6 text-sm text-gray-600">{{ $project->description }}</p>
             @foreach ($project->descriptions as $desc)
@@ -67,6 +67,7 @@ new class extends Component {
                 + Add Details
             </button>
         </div>
+
 
         <!-- Kanban Board -->
         <div class="grid flex-1 grid-cols-4 gap-4 p-4 bg-gray-50">
